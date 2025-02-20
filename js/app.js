@@ -1161,7 +1161,7 @@ var eId = () => {
       navigator.share({
         title: "share",
         text: "",
-        url: `https://m-vnio.github.io/share-screen/r/#/${useThis.params.id}`,
+        url: `https://m-vnio.github.io/stream-live/r/#/${useThis.params.id}`,
       });
     }
   });
