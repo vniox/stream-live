@@ -1079,8 +1079,6 @@ var elementVideo = (useParams) => {
   return $element;
 };
 
-// import StreamLiveVideo from "../export/StreamLiveVideo";
-
 var eId = () => {
   const useApp = window.dataApp;
   const useThis = {
@@ -1115,7 +1113,7 @@ var eId = () => {
             <a href="#" class="button_zl8v1xy">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-svg-name="fi fi-rr-angle-small-left"><path d="M10.6,12.71a1,1,0,0,1,0-1.42l4.59-4.58a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0L9.19,9.88a3,3,0,0,0,0,4.24l4.59,4.59a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z"></path></svg>
             </a>
-            <h3>1739836592661</h3>
+            <h3>${useThis.params.id}</h3>
           </div>
           <div class="div_cfwz4pz" style="gap:5px">
             <button class="button_zl8v1xy button_3p1lvpa">
@@ -1161,7 +1159,7 @@ var eId = () => {
       navigator.share({
         title: "share",
         text: "",
-        url: `https://m-vnio.github.io/stream-live/r/#/${useThis.params.id}`,
+        url: `https://m-vnio.github.io/stream-live/#/r/${useThis.params.id}`,
       });
     }
   });
@@ -1609,7 +1607,7 @@ var rId = () => {
             <a href="#" class="button_zl8v1xy">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-svg-name="fi fi-rr-angle-small-left"><path d="M10.6,12.71a1,1,0,0,1,0-1.42l4.59-4.58a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0L9.19,9.88a3,3,0,0,0,0,4.24l4.59,4.59a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z"></path></svg>
             </a>
-            <h3>1739836592661</h3>
+            <h3>${useThis.params.id}</h3>
           </div>
         </header>
         <div class="div_a0c01c3 div_qyrygt0" data-fullscreen>
