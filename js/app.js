@@ -179,7 +179,7 @@ var dataApp = () => {
       }),
     },
     socket: {
-      io: io("https://l8qn2l7t-4999.brs.devtunnels.ms/"),
+      io: io("https://1fh40x08-3001.brs.devtunnels.ms/"),
     },
 
     routes: new MyClass.RouteHashCallback(),
@@ -1159,7 +1159,7 @@ var eId = () => {
       navigator.share({
         title: "share",
         text: "",
-        url: `https://m-vnio.github.io/stream-live/#/r/${useThis.params.id}`,
+        url: `https://vniox.github.io/stream-live/#/r/${useThis.params.id}`,
       });
     }
   });
@@ -1916,36 +1916,24 @@ window.dataApp = dataApp();
 addEventListener("DOMContentLoaded", () => {
   const userPromise = new Promise((resolve, reject) => {
     const name = "ls-user-data";
+    const datetime = Date.now();
 
-    if (localStorage.getItem(name)) {
-      const data = JSON.parse(localStorage.getItem(name));
+    const data = {
+      uid: datetime,
+      avatar: "",
+      username: datetime,
+    };
 
-      localStorage.setItem(
-        name,
-        JSON.stringify({
-          uid: data.uid,
-          avatar: data.avatar,
-          username: data.username,
-        })
-      );
+    localStorage.setItem(
+      name,
+      JSON.stringify({
+        uid: data.uid,
+        avatar: data.avatar,
+        username: data.username,
+      })
+    );
 
-      resolve(data);
-      return;
-    }
-
-    fetch("https://random-data-api.com/api/users/random_user")
-      .then((res) => res.json())
-      .then((data) => {
-        localStorage.setItem(
-          name,
-          JSON.stringify({
-            uid: data.uid,
-            avatar: data.avatar,
-            username: data.username,
-          })
-        );
-        resolve(data);
-      });
+    resolve(data);
   });
 
   userPromise.then((user) => {
